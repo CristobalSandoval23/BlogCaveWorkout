@@ -14,12 +14,16 @@ html{
     padding: 0;
     color: var(--color-first);
 }
+div{
+    padding: 0;
+}
 li {
     list-style: none;
 }
-ul{
+/* ul{
     width: 1px;
-}
+} */
+
 /* ********** Components ********** */
 body{
     display: grid;
@@ -49,11 +53,11 @@ body{
 
 .container-header-2{
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     padding: 10px;
-    min-width: 200px;
+    min-width: 80%;
 }
 
 .container-header-2 div{
@@ -77,14 +81,29 @@ body{
 }
 .openIcon, .closeIcon{
     position: absolute;
-    top: 20px;
+    top: 60px;
     left: 10px;
 }
 .closeIcon{
     left: 15px;
 }
 .fas{
-    font-size: 45px;
+    font-size: 35px;
+}
+.container-search{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: center;
+    border: 2px solid black;
+    width: 75%;
+}
+.container-search button,.container-search input {
+    border-style: none;
+    padding: 0px 5px;
+}
+.container-search input{
+    width: 100%;
 }
 
 /* ********** Utilities ********** */
@@ -96,11 +115,19 @@ body{
     .header{
         flex-direction: row;
         justify-content: space-evenly;
+        align-items: center;
     }
     .container-header-2{
         flex-direction: row-reverse;
     }
+    .container-search{
+        width: 40%;
+    }
     .openIcon, .closeIcon{
-        top: 10px;
+        top: 20px;
+        left: 20px;
+    }
+    .closeIcon{
+        left: 23px;
     }
  }
