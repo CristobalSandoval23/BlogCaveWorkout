@@ -32,5 +32,11 @@
             $menu.style.removeProperty('left');
         }
     });
+
+    var $search = d.querySelector(".search");
+
+    $search.addEventListener('click', () =>{
+        alert("Sentadilla")
+    })
     
 })(document);
